@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import myPhoto from "../assets/myphoto1.jpeg"; // change filename if different
+import myPhoto from "../assets/myphoto2.jpeg"; // change filename if different
 
 export default function Hero() {
   return (
