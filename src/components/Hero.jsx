@@ -48,7 +48,7 @@ export default function Hero() {
           <img
             src={myPhoto}
             alt="Sohail Khan"
-            className="relative w-72 h-72 rounded-full object-cover scale-[2.2] object-center border-4 border-gray-800 shadow-xl"
+            className="relative w-48 h-48 rounded-full object-cover scale-[2.2] object-center border-4 border-gray-800 shadow-xl"
           />
 
         </motion.div>
