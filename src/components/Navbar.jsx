@@ -27,6 +27,7 @@ export default function Navbar() {
   const links = [
     { id: "about", label: "About" },
     { id: "skills", label: "Skills" },
+    { id: "resume", label: "Resume" },
     { id: "projects", label: "Projects" },
     { id: "contact", label: "Contact" },
   ];
@@ -39,7 +40,7 @@ export default function Navbar() {
       className="fixed top-0 left-0 w-full z-50 bg-black/60 backdrop-blur-lg border-b border-gray-800"
     >
       <div className="max-w-6xl mx-auto px-6 py-4 flex justify-center items-center">
-        <div className="flex gap-6 sm:gap-10 relative">
+        <div className="flex gap-3 sm:gap-8 relative">
           {links.map((link) => (
             <a
               key={link.id}
