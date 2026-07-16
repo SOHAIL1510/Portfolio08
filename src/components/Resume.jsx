@@ -6,6 +6,28 @@ import TiltCard from "./TiltCard";
 const RESUME_URL = "https://docs.google.com/viewer?url=https://raw.githubusercontent.com/SOHAIL1510/Portfolio08/main/public/Sohail_Khan_Resume.pdf";
 
 export default function Resume() {
+  const handleViewResume = (e) => {
+    e.preventDefault();
+    const pdfUrl = `${window.location.origin}/Sohail_Khan_Resume.pdf`;
+    
+    // Check if running on localhost or a private local network
+    const isLocal = 
+      window.location.hostname === "localhost" || 
+      window.location.hostname === "127.0.0.1" || 
+      window.location.hostname.startsWith("192.168.") || 
+      window.location.hostname.startsWith("10.") || 
+      window.location.hostname.startsWith("172.16.");
+
+    if (isLocal) {
+      // Local development: open PDF natively in a new tab
+      window.open("/Sohail_Khan_Resume.pdf", "_blank");
+    } else {
+      // Production: stream through Google Docs Web Viewer to bypass mobile WebView blocks
+      const viewerUrl = `https://docs.google.com/viewer?url=${encodeURIComponent(pdfUrl)}`;
+      window.open(viewerUrl, "_blank");
+    }
+  };
+
   const education = [
     {
       degree: "Bachelor of Engineering",
@@ -57,7 +79,7 @@ export default function Resume() {
                   className="relative"
                 >
                   {/* Timeline bullet */}
-                  <span className="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-blue-500 border-4 border-gray-950 shadow-md"></span>
+                  <span className="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-blue-500 border-4 border-gray-955 shadow-md"></span>
                   <span className="text-xs font-semibold text-blue-400 font-mono bg-blue-500/10 px-2.5 py-1 rounded-full">{exp.duration}</span>
                   <h4 className="text-xl font-bold text-white mt-2">{exp.role}</h4>
                   <p className="text-sm text-gray-400 font-semibold">{exp.company}</p>
@@ -80,7 +102,7 @@ export default function Resume() {
                   className="relative"
                 >
                   {/* Timeline bullet */}
-                  <span className="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-purple-500 border-4 border-gray-950 shadow-md"></span>
+                  <span className="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-purple-500 border-4 border-gray-955 shadow-md"></span>
                   <span className="text-xs font-semibold text-purple-400 font-mono bg-purple-500/10 px-2.5 py-1 rounded-full">{edu.duration}</span>
                   <h4 className="text-xl font-bold text-white mt-2">{edu.degree}</h4>
                   <p className="text-sm text-gray-400 font-semibold">{edu.institution}</p>
@@ -105,16 +127,14 @@ export default function Resume() {
               </svg>
               <h3 className="text-xl font-bold text-white">Looking for the full resume?</h3>
               <p className="mt-2 text-gray-400 text-sm max-w-md leading-relaxed">
-                Click below to view or download my comprehensive PDF resume detailing my qualifications, projects, and work history.
+                Click below to view my comprehensive PDF resume detailing my qualifications, projects, and work history.
               </p>
-              <a
-                href={RESUME_URL}
-                target="_blank"
-                rel="noopener noreferrer"
+              <button
+                onClick={handleViewResume}
                 className="mt-6 px-8 py-3 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-xl transition duration-300 shadow-md shadow-blue-500/20 hover:scale-105 inline-block text-center cursor-pointer"
               >
                 View PDF Resume
-              </a>
+              </button>
             </div>
           </TiltCard>
         </motion.div>
