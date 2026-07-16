@@ -2,6 +2,9 @@
 import { motion } from "framer-motion";
 import TiltCard from "./TiltCard";
 
+// Change this to your Google Drive share link (Anyone with link can view) for instant mobile previewing
+const RESUME_URL = "/Sohail_Khan_Resume.pdf";
+
 export default function Resume() {
   const education = [
     {
@@ -105,7 +108,7 @@ export default function Resume() {
                 Click below to view or download my comprehensive PDF resume detailing my qualifications, projects, and work history.
               </p>
               <a
-                href="/Sohail_Khan_Resume.pdf"
+                href={RESUME_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-6 px-8 py-3 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-xl transition duration-300 shadow-md shadow-blue-500/20 hover:scale-105 inline-block text-center cursor-pointer"
