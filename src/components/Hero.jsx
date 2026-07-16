@@ -1,9 +1,10 @@
+/* eslint-disable no-unused-vars */
 import { motion } from "framer-motion";
-import myPhoto from "../assets/myphoto2.jpeg"; // change filename if different
+import myPhoto from "../assets/myphoto3.jpeg"; // change filename if different
 
 export default function Hero() {
   return (
-    <section className="min-h-screen flex items-center justify-center px-6 pt-20">
+    <section className="min-h-screen flex items-center justify-center px-6 pt-20 relative z-10">
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
         
         <motion.div
@@ -16,8 +17,9 @@ export default function Hero() {
           </h1>
 
           <p className="mt-6 text-gray-300 text-lg leading-relaxed">
-            Full Stack Devloper & UI/UX Designer. I build modern, responsive
-            websites and design clean user experiences.
+            Full Stack Developer & UI/UX Designer. I build modern, responsive
+            websites and design clean user experiences.Transforming raw data into intelligent products through scalable data engineering, AI, and cloud technologies.
+Building modern solutions with Python, SQL, Apache Spark, Azure, and automation to solve real-world business challenges.
           </p>
 
           <div className="mt-8 flex gap-4">

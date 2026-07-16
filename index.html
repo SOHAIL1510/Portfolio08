@@ -2,6 +2,43 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <script>
+      window.addEventListener('error', function(e) {
+        var div = document.createElement('div');
+        div.style.position = 'fixed';
+        div.style.inset = '0';
+        div.style.background = '#0e0808';
+        div.style.color = '#ff4a4a';
+        div.style.padding = '30px';
+        div.style.zIndex = '1000000';
+        div.style.fontFamily = 'monospace';
+        div.style.fontSize = '16px';
+        div.style.lineHeight = '1.5';
+        div.style.overflow = 'auto';
+        div.innerHTML = '<h1 style="color: #ff3b30; font-size: 24px; margin-bottom: 20px; border-bottom: 2px solid #ff3b30; padding-bottom: 10px;">JavaScript Runtime Error</h1>' +
+          '<strong>Message:</strong> ' + e.message + '<br/><br/>' +
+          '<strong>Filename:</strong> ' + e.filename + '<br/><br/>' +
+          '<strong>Line:</strong> ' + e.lineno + ' | <strong>Column:</strong> ' + e.colno + '<br/><br/>' +
+          '<strong>Stack Trace:</strong><br/><pre style="background: #1e1e1e; padding: 15px; border-radius: 8px; margin-top: 10px; color: #d4d4d4;">' + (e.error ? e.error.stack : 'No stack trace available') + '</pre>';
+        document.body.appendChild(div);
+      });
+      window.addEventListener('unhandledrejection', function(e) {
+        var div = document.createElement('div');
+        div.style.position = 'fixed';
+        div.style.inset = '0';
+        div.style.background = '#0e0808';
+        div.style.color = '#ff9f1a';
+        div.style.padding = '30px';
+        div.style.zIndex = '1000000';
+        div.style.fontFamily = 'monospace';
+        div.style.fontSize = '16px';
+        div.style.lineHeight = '1.5';
+        div.style.overflow = 'auto';
+        div.innerHTML = '<h1 style="color: #ff9f1a; font-size: 24px; margin-bottom: 20px; border-bottom: 2px solid #ff9f1a; padding-bottom: 10px;">Promise Rejection Error</h1>' +
+          '<strong>Reason:</strong> ' + e.reason + '<br/><br/>';
+        document.body.appendChild(div);
+      });
+    </script>
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>portfolio</title>
