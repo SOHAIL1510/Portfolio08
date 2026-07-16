@@ -46,14 +46,14 @@ Building modern solutions with Python, SQL, Apache Spark, Azure, and automation 
           className="flex justify-center relative mt-8 md:mt-0"
         >
           {/* Glowing background blur */}
-          <div className="w-56 h-56 md:w-80 md:h-80 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 blur-3xl opacity-50 absolute"></div>
+          <div className="w-56 h-56 md:w-[400px] md:h-[400px] rounded-full bg-gradient-to-r from-blue-500 to-purple-600 blur-3xl opacity-50 absolute"></div>
 
           {/* Masked circle container to prevent image scaling overflow */}
-          <div className="relative w-48 h-48 md:w-72 md:h-72 rounded-full overflow-hidden border-4 border-gray-800 shadow-xl flex items-center justify-center">
+          <div className="relative w-48 h-48 md:w-[380px] md:h-[380px] rounded-full overflow-hidden border-4 border-gray-800 shadow-xl flex items-center justify-center">
             <img
               src={myPhoto}
               alt="Sohail Khan"
-              className="w-full h-full object-cover scale-[2.2] object-center"
+              className="w-full h-full object-cover scale-[1.05] object-center transition-transform duration-500 hover:scale-110"
             />
           </div>
 
