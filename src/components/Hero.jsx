@@ -4,7 +4,7 @@ import myPhoto from "../assets/myphoto3.jpeg"; // change filename if different
 
 export default function Hero() {
   return (
-    <section className="min-h-screen flex items-center justify-center px-6 pt-20 relative z-10">
+    <section className="min-h-screen flex items-center justify-center px-6 pt-28 pb-12 md:py-20 relative z-10">
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
         
         <motion.div
@@ -43,15 +43,19 @@ Building modern solutions with Python, SQL, Apache Spark, Azure, and automation 
           initial={{ scale: 0.6, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 1 }}
-          className="flex justify-center relative"
+          className="flex justify-center relative mt-8 md:mt-0"
         >
-          <div className="w-72 h-72 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 blur-3xl opacity-50 absolute"></div>
+          {/* Glowing background blur */}
+          <div className="w-56 h-56 md:w-80 md:h-80 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 blur-3xl opacity-50 absolute"></div>
 
-          <img
-            src={myPhoto}
-            alt="Sohail Khan"
-            className="relative w-48 h-48 rounded-full object-cover scale-[2.2] object-center border-4 border-gray-800 shadow-xl"
-          />
+          {/* Masked circle container to prevent image scaling overflow */}
+          <div className="relative w-48 h-48 md:w-72 md:h-72 rounded-full overflow-hidden border-4 border-gray-800 shadow-xl flex items-center justify-center">
+            <img
+              src={myPhoto}
+              alt="Sohail Khan"
+              className="w-full h-full object-cover scale-[2.2] object-center"
+            />
+          </div>
 
         </motion.div>
 
