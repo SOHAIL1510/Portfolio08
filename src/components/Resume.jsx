@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import TiltCard from "./TiltCard";
 
 // Change this to your Google Drive share link (Anyone with link can view) for instant mobile previewing
-const RESUME_URL = "/Sohail_Khan_Resume.pdf";
+const RESUME_URL = "https://drive.google.com/file/d/1RFYOZq3oKIsrZzIjYjpkoiwfGbNKrYCz/view?usp=drive_link";
 
 export default function Resume() {
   const education = [
