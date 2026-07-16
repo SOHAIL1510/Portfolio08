@@ -2,8 +2,8 @@
 import { motion } from "framer-motion";
 import TiltCard from "./TiltCard";
 
-// Change this to your Google Drive share link (Anyone with link can view) for instant mobile previewing
-const RESUME_URL = "https://drive.google.com/file/d/1RFYOZq3oKIsrZzIjYjpkoiwfGbNKrYCz/view?usp=drive_link";
+// Google Docs Viewer wrapper to guarantee instant, cross-platform previewing (even in Snapchat/Instagram WebViews)
+const RESUME_URL = "https://docs.google.com/viewer?url=https://raw.githubusercontent.com/SOHAIL1510/Portfolio08/main/public/Sohail_Khan_Resume.pdf";
 
 export default function Resume() {
   const education = [
