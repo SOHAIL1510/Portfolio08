@@ -5,30 +5,25 @@ import TiltCard from "./TiltCard";
 export default function Resume() {
   const education = [
     {
-      degree: "Bachelor of Technology in Computer Science",
-      institution: "Your University / Institute",
+      degree: "Bachelor of Engineering",
+      institution: "International Institute of Information Technology, Pune ",
       duration: "2022 - 2026",
       desc: "Specializing in Software Engineering, database systems, web architectures, and UI/UX design principles. Building a solid foundation in software engineering and front-end/back-end frameworks.",
     },
     {
       degree: "Higher Secondary Education (Class XII)",
-      institution: "Your Junior College / School",
+      institution: "Shri Mahavir Jr College,Lasalgaon",
       duration: "2020 - 2022",
       desc: "Focused on Science, Physics, Mathematics, and Computer Science. Gained early experience in algorithms and basic object-oriented programming.",
     },
   ];
 
   const experience = [
-    {
-      role: "Full Stack & AI Developer Intern",
-      company: "Tech Solutions / Projects",
-      duration: "2025 - Present",
-      desc: "Developing responsive frontends and backend services. Building modern integrations, including a voice-enabled AI Agent utilizing browser SpeechRecognition/SpeechSynthesis and Canvas-based sound wave visualizers.",
-    },
+
     {
       role: "UI/UX Designer & Web Developer",
       company: "Freelance & Internships",
-      duration: "2023 - Present",
+      duration: "feb 2024 - May 2024",
       desc: "Designing high-fidelity prototypes and user flows in Figma. Translating visual assets into clean, efficient, and responsive web components using React, Tailwind CSS, and Framer Motion.",
     },
   ];
