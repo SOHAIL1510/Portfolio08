@@ -107,8 +107,6 @@ export default function Resume() {
               <a
                 href="/Sohail_Khan_Resume.pdf"
                 download="Sohail_Khan_Resume.pdf"
-                target="_blank"
-                rel="noreferrer"
                 className="mt-6 px-8 py-3 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-xl transition duration-300 shadow-md shadow-blue-500/20 hover:scale-105 inline-block text-center cursor-pointer"
               >
                 Download PDF Resume
