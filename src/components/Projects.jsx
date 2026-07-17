@@ -7,7 +7,7 @@ const projects = [
     title: "AI Telecaller & Voice Agent",
     desc: "An interactive, voice-enabled AI assistant built directly into the portfolio. It simulates a live telecalling connection using browser SpeechRecognition and SpeechSynthesis APIs, featuring dynamic audio wave visualizations via Canvas, custom dialer UI, interactive query suggestions, and keyboard input fallbacks.",
     github: "https://github.com/SOHAIL1510/BoloSetu-AI",
-    live:"https://bolo-setu-ai-y3wm.vercel.app/",
+    live:"https://bolo-setu-ai.vercel.app/",
   },
   {
     title: "SkillShare Hub",
