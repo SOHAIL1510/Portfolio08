@@ -2,31 +2,10 @@
 import { motion } from "framer-motion";
 import TiltCard from "./TiltCard";
 
-// Google Docs Viewer wrapper to guarantee instant, cross-platform previewing (even in Snapchat/Instagram WebViews)
-const RESUME_URL = "https://docs.google.com/viewer?url=https://raw.githubusercontent.com/SOHAIL1510/Portfolio08/main/public/Sohail_Khan_Resume.pdf";
+// Google Drive Resume Link
+const RESUME_URL = "https://drive.google.com/file/d/1I4obZkWz-i6AtoUpBEIn4fBitE68IgTk/view?usp=drive_link";
 
 export default function Resume() {
-  const handleViewResume = (e) => {
-    e.preventDefault();
-    const pdfUrl = `${window.location.origin}/Sohail_Khan_Resume.pdf`;
-    
-    // Check if running on localhost or a private local network
-    const isLocal = 
-      window.location.hostname === "localhost" || 
-      window.location.hostname === "127.0.0.1" || 
-      window.location.hostname.startsWith("192.168.") || 
-      window.location.hostname.startsWith("10.") || 
-      window.location.hostname.startsWith("172.16.");
-
-    if (isLocal) {
-      // Local development: open PDF natively in a new tab
-      window.open("/Sohail_Khan_Resume.pdf", "_blank");
-    } else {
-      // Production: stream through Google Docs Web Viewer to bypass mobile WebView blocks
-      const viewerUrl = `https://docs.google.com/viewer?url=${encodeURIComponent(pdfUrl)}`;
-      window.open(viewerUrl, "_blank");
-    }
-  };
 
   const education = [
     {
@@ -129,12 +108,14 @@ export default function Resume() {
               <p className="mt-2 text-gray-400 text-sm max-w-md leading-relaxed">
                 Click below to view my comprehensive PDF resume detailing my qualifications, projects, and work history.
               </p>
-              <button
-                onClick={handleViewResume}
+              <a
+                href={RESUME_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="mt-6 px-8 py-3 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-xl transition duration-300 shadow-md shadow-blue-500/20 hover:scale-105 inline-block text-center cursor-pointer"
               >
                 View PDF Resume
-              </button>
+              </a>
             </div>
           </TiltCard>
         </motion.div>
